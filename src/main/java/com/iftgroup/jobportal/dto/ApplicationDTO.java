@@ -3,6 +3,7 @@ package com.iftgroup.jobportal.dto;
 import com.iftgroup.jobportal.entity.Application;
 import com.iftgroup.jobportal.entity.Job;
 
+import jakarta.annotation.Nonnull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,6 +15,7 @@ public class ApplicationDTO {
     private Long id;
     private Long userId;
     private Long jobId;
+    @Nonnull
     private String resume;
     private String coverLetter;
     private Job job;

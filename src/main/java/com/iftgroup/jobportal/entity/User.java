@@ -31,16 +31,12 @@ public class User {
 
     @Column(nullable = false)
     private String password;
+    
+    private String resumePath;
+
+    private String coverLetterPath;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Application> applications;
 
-    public String getName() {
-        return null;
-    }
-
-    public void setName(String name) {
-    }
-
-    // Getters and setters
 }
