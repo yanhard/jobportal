@@ -32,8 +32,7 @@ public class UserDetailsImpl implements UserDetails {
         return username;
     }
 
-    // Metode dibawah ini digunakan untuk menentukan apakah akun pengguna telah kadaluwarsa, terkunci, atau tidak aktif.
-    // Dalam contoh ini, asumsikan akun tidak pernah kadaluwarsa, terkunci atau tidak aktif.
+    // asumsikan akun tidak pernah kadaluwarsa, terkunci atau tidak aktif.
     
     @Override
     public boolean isAccountNonExpired() {
