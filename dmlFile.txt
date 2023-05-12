@@ -1,0 +1,85 @@
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.cover_letter_path,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.resume_path
+    from
+        users u1_0
+    where
+        u1_0.email=?
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.category,
+        j1_0.company_id,
+        j1_0.description,
+        j1_0.title
+    from
+        jobs j1_0
+Hibernate: 
+    insert
+    into
+        jobs
+        (category, company_id, description, title)
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.category,
+        j1_0.company_id,
+        j1_0.description,
+        j1_0.title
+    from
+        jobs j1_0
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.category,
+        j1_0.company_id,
+        j1_0.description,
+        j1_0.title
+    from
+        jobs j1_0
+    where
+        j1_0.category=?
+Hibernate: 
+    select
+        j1_0.id,
+        j1_0.category,
+        c1_0.id,
+        c1_0.address,
+        c1_0.name,
+        j1_0.description,
+        j1_0.title
+    from
+        jobs j1_0
+    left join
+        companies c1_0
+            on c1_0.id=j1_0.company_id
+    where
+        j1_0.id=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.cover_letter_path,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_name,
+        u1_0.password,
+        u1_0.resume_path
+    from
+        users u1_0
+    where
+        u1_0.id=?
+Hibernate:
+    insert
+    into
+        applications
+        (cover_letter, job_id, resume, user_id)
+    values
+        (?, ?, ?, ?)
