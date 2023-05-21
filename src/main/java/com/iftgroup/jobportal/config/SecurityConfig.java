@@ -63,7 +63,7 @@ public class SecurityConfig {
     
         http
             .csrf()
-            .and()
+            .disable()
             .cors().configurationSource(corsConfigurationSource()).and()
             .authorizeRequests()
                 .requestMatchers(publicUrls).permitAll()
